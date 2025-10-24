@@ -1,0 +1,43 @@
+11:37:18.547 Running build in Washington, D.C., USA (East) – iad1
+11:37:18.548 Build machine configuration: 2 cores, 8 GB
+11:37:18.568 Cloning github.com/HUSSAM-ctrl/hussam-gold-signals. (Branch: main, Commit: 41ca7c7)
+11:37:18.754 Previous build caches not available
+11:37:18.886 Cloning completed: 317.000ms
+11:37:19.165 Running "vercel build"
+11:37:19.565 Vercel CLI 48.6.0
+11:37:19.731 WARN! Due to `builds` existing in your configuration file, the Build and Development Settings defined in your Project Settings will not apply. Learn More: https://vercel.link/unused-build-settings
+11:37:22.375 Installing dependencies...
+11:37:43.528 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+11:37:43.872 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+11:37:44.239 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+11:37:44.282 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+11:37:44.335 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+11:37:45.308 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+11:37:45.733 
+11:37:45.733 added 277 packages in 23s
+11:37:45.734 
+11:37:45.734 110 packages are looking for funding
+11:37:45.734   run `npm fund` for details
+11:37:45.783 Running "npm run build"
+11:37:45.894 
+11:37:45.895 > hussam-gold-signals-frontend@0.0.0 build
+11:37:45.896 > vite build
+11:37:45.896 
+11:37:46.148 [36mvite v5.4.21 [32mbuilding for production...[36m[39m
+11:37:46.198 transforming...
+11:37:46.208 [32m✓[39m 2 modules transformed.
+11:37:46.213 [31mx[39m Build failed in 42ms
+11:37:46.214 [31merror during build:
+11:37:46.214 [31m[vite]: Rollup failed to resolve import "/src/main.jsx" from "/vercel/path0/index.html".
+11:37:46.214 This is most likely unintended because it can break your application at runtime.
+11:37:46.214 If you do want to externalize this module explicitly add it to
+11:37:46.214 `build.rollupOptions.external`[31m
+11:37:46.215     at viteWarn (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65855:17)
+11:37:46.215     at onwarn (file:///vercel/path0/node_modules/@vitejs/plugin-react/dist/index.js:90:7)
+11:37:46.215     at onRollupWarning (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65885:5)
+11:37:46.215     at onwarn (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:65550:7)
+11:37:46.215     at file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:20951:13
+11:37:46.215     at Object.logger [as onLog] (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:22823:9)
+11:37:46.215     at ModuleLoader.handleInvalidResolvedId (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:21567:26)
+11:37:46.215     at file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:21525:26[39m
+11:37:46.229 Error: Command "npm run build" exited with 1
