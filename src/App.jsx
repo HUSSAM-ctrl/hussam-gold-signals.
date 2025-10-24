@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function App(){
+  const BACKEND_HOST = 'hussam-gold-signals-backend.onrender.com';
   const [signals, setSignals] = useState([]);
   const [status, setStatus] = useState('غير متصل');
   const [token, setToken] = useState(localStorage.getItem('token') || '');
@@ -10,7 +11,7 @@ export default function App(){
   useEffect(()=>{
     // بناء عنوان الويب سوكيت بناء على مكان الاستضافة
     const proto = location.protocol === 'https:' ? 'wss' : 'ws';
-    const host = location.hostname;
+    const host = 'hussam-gold-signals-backend.onrender.com' ;
     // هنا نفترض أن الخادم مصحوب بنفس الدومين على بورت 8000 أو استخدم نطاق الخادم
     const url = `${proto}://${host}/ws`;
     const socket = new WebSocket(url);
@@ -34,7 +35,7 @@ export default function App(){
 
   async function doLogin(){
     try{
-      const resp = await fetch('/api/loginProxy', { // note: deployed will proxy to backend
+      const resp = await fetch(`https://${BACKEND_HOST}/api/loginProxy`, {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({password})
@@ -55,7 +56,7 @@ export default function App(){
     const tp = parseFloat(prompt('TP', '0'));
     if(!instrument || !action) return;
     try{
-      const resp = await fetch('/api/manualProxy', {
+      const resp = await fetch(`https://${BACKEND_HOST}/api/manualProxy`, {
         method:'POST',
         headers:{ 'Content-Type':'application/json', 'x-api-key': token || '' },
         body: JSON.stringify({ instrument, action, entry, sl, tp })
